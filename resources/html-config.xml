@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+	<configuration>
+		<!-- report theme -->
+		<!-- standard, dark -->
+		<theme>standard</theme>
+ 
+		<!-- viewstyle -->
+        <!-- alt-view -->
+        <viewstyle>alt-view</viewstyle>
+
+        <!-- document encoding -->
+        <!-- defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- offline report -->
+        <enableOfflineMode>false</enableOfflineMode>
+		
+        <!-- enable or disable timeline on dashboard -->
+        <enableTimeline>false</enableTimeline>
+        
+        <enableCategoryView>true</enableCategoryView>
+         
+		<!-- protocol for script and stylesheets -->
+		<!-- defaults to https -->
+		<protocol>https</protocol>
+ 
+		<!-- title of the document -->
+		<documentTitle>BD - API Automation Report</documentTitle>
+ 
+		<!-- report name - displayed at top-nav -->
+		<reportName>
+		 <![CDATA[
+                
+            ]]>
+		</reportName>
+ 
+		<!-- report headline - displayed at top-nav, after reportHeadline -->
+		<reportHeadline>BD - API Automation Report</reportHeadline>
+ 
+		<!-- global date format override -->
+		<!-- defaults to yyyy-MM-dd -->
+		<dateFormat>yyyy-MM-dd</dateFormat>
+ 
+		<!-- global time format override -->
+		<!-- defaults to HH:mm:ss -->
+		<timeFormat>HH:mm:ss</timeFormat>
+ 
+		<!-- custom javascript -->
+		<scripts>
+		<![CDATA[
+			$(document).ready(function() {
+				$('a.brand-logo')[0].innerText='API Automation Report'
+				$('div.left.panel-name')[0].innerText='Stories'
+		  
+				if($('span.tooltipped > span.strong')[0].innerText == '1') {
+					$('span.tooltipped')[0].innerHTML = $('span.tooltipped')[0].innerHTML.replace('test(s)', 'story')
+				}
+				else {
+					$('span.tooltipped')[0].innerHTML = $('span.tooltipped')[0].innerHTML.replace('test(s)', 'stories')
+				}
+			
+				if($('div.block.text-small > span.strong.tooltipped')[1].innerText == '1')
+					$('div.block.text-small')[1].innerHTML = $('div.block.text-small')[1].innerHTML.replace('test(s)', 'story')
+				else
+					$('div.block.text-small')[1].innerHTML = $('div.block.text-small')[1].innerHTML.replace('test(s)', 'stories')
+			
+		  $('div.card-panel.r')[0].innerHTML = $('div.card-panel.r')[0].innerHTML.replace('Tests', 'Stories')
+		  $('div.category-tests > table.bordered.table-results > thead > tr > th')[1].innerText = 'Story Name'
+		  $('div.card-panel.dashboard-categories > table > tbody > tr > th')[0].innerText = 'Feature'
+        });
+      ]]>
+		</scripts>
+ 
+		<!-- custom styles -->
+		<styles>
+            <![CDATA[
+                nav .brand-logo {
+			        font-size: 12px;
+			        padding-left: 15px;
+			        position: relative;
+			        margin-left: 20px;
+			        margin-right: 20px;
+			        font-weight: 600;
+			        width: 145px;
+			        padding-top: 1px;
+			    }
+			  
+			    .report-name { padding-left: 10px; } .report-name > img { float: left;height: 50%;margin-left: 20px;margin-top: 12px;width: auto; }
+            ]]>
+		</styles>
+	</configuration>
+</extentreports>

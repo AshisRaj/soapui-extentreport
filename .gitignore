@@ -1,0 +1,18 @@
+### Java ###
+# Compiled class file
+*.class
+
+# class path
+*.classpath
+
+# Project
+*.project
+
+# settings
+.settings
+
+### bin ###
+bin/
+
+### build ###
+build/

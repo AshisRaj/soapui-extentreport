@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:soapui-listeners xmlns:tns="http://eviware.com/soapui/config">
+
+	<!-- The below demo-listeners are described in the extensions overview at
+	     http://www.soapui.org/architecture/extensions.html  -->
+
+  <tns:listener id="MyListener" 
+	    	listenerClass="com.araj.soapui.listener.TestCaseRunListener"
+    		listenerInterface="com.eviware.soapui.model.testsuite.TestRunListener"/>	
+ </tns:soapui-listeners>
