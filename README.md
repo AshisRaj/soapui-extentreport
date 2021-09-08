@@ -16,7 +16,7 @@ Initializing PropertyManager, ExtentReportManager and CSVReportManager...
 
 Loaded application properties file
 
-Report Path - D:\Projects\Java\bd-api-automation-framework\TestReports\CSVReport
+Report Path - C:\Users\ashis.raj\ReadyAPI\TestReports\CSVReport
 
 Done.
 
